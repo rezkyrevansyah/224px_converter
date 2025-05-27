@@ -28,13 +28,13 @@ uploaded_files = st.file_uploader(
     "Upload gambar", 
     type=["jpg", "jpeg", "png"], 
     accept_multiple_files=True, 
-    help="Maksimal 20 file",
+    help="Maksimal 100 file",
     key=st.session_state.uploader_key
 )
 
 # Proses jika ada file
 if uploaded_files:
-    if len(uploaded_files) > 20:
+    if len(uploaded_files) > 100:
         st.warning("Maksimal hanya bisa upload 20 gambar.")
     else:
         processed_images = []
